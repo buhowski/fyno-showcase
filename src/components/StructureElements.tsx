@@ -22,3 +22,12 @@ export const PictureComponent: React.FC<PictureComponentProps> = ({
 		</picture>
 	);
 };
+
+interface H3Props {
+	text: string;
+	className?: string;
+}
+
+export const H3: React.FC<H3Props> = ({ text, className }) => {
+	return <h3 className={className}>{text}</h3>;
+};

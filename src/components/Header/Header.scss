@@ -12,26 +12,67 @@
 	}
 
 	&-list {
-		border-radius: $border-radius;
-		border: $border;
+		border-radius: 16px;
 		box-shadow: $box-shadow;
+
+		> * {
+			&:first-child {
+				padding-left: 16px;
+				border-top-left-radius: 16px;
+				border-bottom-left-radius: 16px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 16px;
+				border-bottom-right-radius: 16px;
+			}
+		}
 
 		&__item {
 			padding: 7px 20px;
+			border: $border;
 
-			&:first-child {
-				padding-left: 16px;
+			&:hover {
+				background-color: rgba($borders-color, 0.8);
 			}
 
 			&--dropdown {
 				padding-right: 15px;
-				border-left: $border;
+				border-top-right-radius: 16px;
+				border-bottom-right-radius: 16px;
+
+				&.isOpened {
+					border-bottom-right-radius: 0;
+					border-bottom: 0;
+				}
 			}
 
 			&--middle {
 				padding-left: 20px;
 				padding-right: 20px;
-				border-left: $border;
+				position: relative;
+				border-right: 0;
+				border-left: 0;
+
+				&::after,
+				&::before {
+					content: '';
+					display: block;
+					width: 0.5px;
+					height: 100%;
+					// background-color: #e5e5ea;
+					position: absolute;
+					top: 0;
+					overflow: hidden;
+				}
+
+				&::before {
+					left: -1px;
+				}
+
+				&::after {
+					right: -1px;
+				}
 			}
 		}
 	}
@@ -44,6 +85,10 @@
 		box-shadow: $box-shadow;
 		display: flex;
 		align-items: center;
+
+		&:hover {
+			background-color: rgba($borders-color, 0.8);
+		}
 
 		svg {
 			margin-right: 8px;

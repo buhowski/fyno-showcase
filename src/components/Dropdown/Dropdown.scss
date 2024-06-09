@@ -31,21 +31,20 @@
 	&-menu {
 		width: 100%;
 		position: absolute;
-		top: calc(100% + 1px);
-		left: -1px;
+		top: calc(100%);
+		left: 0;
 		background-color: $white;
+		border: $border;
 		border-bottom-left-radius: $border-radius;
 		border-bottom-right-radius: $border-radius;
-		border: $border;
 		overflow: hidden;
 
 		li {
 			padding: 10px 20px;
 			cursor: pointer;
-			// transition: color $transition-time;
 
 			&:hover {
-				background-color: rgba($primary-color, 0.1);
+				background-color: rgba($borders-color, 0.8);
 			}
 		}
 	}

@@ -13,18 +13,15 @@ interface DropdownItem {
 // Interface defining the props accepted by the Dropdown component
 interface DropdownProps {
 	options: DropdownItem[];
-	onSelect: (option: number) => void;
 	defaultSelected?: number;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, defaultSelected }) => {
+const Dropdown: React.FC<DropdownProps> = ({ options, defaultSelected = 7 }) => {
 	// State variable to track if the dropdown is open
 	const [isOpen, setIsOpen] = useState(false);
 
 	// State variable to store the selected value
-	const [selectedValue, setSelectedValue] = useState<number | null>(
-		defaultSelected !== undefined ? defaultSelected : null
-	);
+	const [selectedValue, setSelectedValue] = useState<number>(defaultSelected);
 
 	// Fetch initial value from local storage on component mount
 	useEffect(() => {
@@ -43,9 +40,9 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, defaultSelected 
 	// Function to handle selecting an option
 	const handleSelect = (option: number) => {
 		setSelectedValue(option);
-		onSelect(option);
-		localStorage.setItem('selectedDays', option.toString());
 		setIsOpen(false);
+
+		localStorage.setItem('selectedDays', option.toString());
 	};
 
 	// Function to render the dropdown items
@@ -70,11 +67,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, defaultSelected 
 				}`}
 				onClick={handleClick}
 			>
-				<span>
-					{selectedValue
-						? options.find((o: DropdownItem) => o.value === selectedValue)?.label
-						: 'Select Days'}
-				</span>
+				<span>{options.find((o) => o.value === selectedValue)?.label}</span>
 
 				{dropArrowIcon}
 			</button>

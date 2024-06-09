@@ -19,10 +19,6 @@ const options: DropdownItem[] = [
 ];
 
 const Header = () => {
-	const handleSelect = (selectedValue: number) => {
-		console.log('Selected value:', selectedValue);
-	};
-
 	return (
 		<header className='header'>
 			<div className='navigation-menu'>
@@ -38,7 +34,7 @@ const Header = () => {
 						Iceland
 					</button>
 
-					<Dropdown options={options} onSelect={handleSelect} defaultSelected={7} />
+					<Dropdown options={options} />
 				</div>
 
 				<button className='navigation-create' type='button'>

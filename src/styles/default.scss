@@ -2,13 +2,28 @@
 
 body {
 	font-family: $font-primary;
+	line-height: $base-line-height;
+	color: $black;
+
+	scroll-behavior: smooth;
 	background-color: #f5f5f5;
-	// line-height: ;
 }
 
 .wrapper {
-	width: min(100%, 768px); // instead of max-width
+	width: min(100%, 761px); // instead of max-width
 	margin-inline: auto; // instead of margin: 0 auto;
 	padding: 20px 32px 48px;
 	background-color: $white;
+}
+
+.default-h3 {
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -0.3px;
+}
+
+.default-h4 {
+	font-size: 15px;
+	letter-spacing: -0.2px;
+	color: rgba($primary-color, 0.8);
 }

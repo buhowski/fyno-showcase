@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.overall {
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	padding: 24px;
+	margin-top: 28px;
+	border: $border;
+	overflow: hidden;
+
+	&-grid {
+		display: flex;
+		align-items: center;
+	}
+
+	&-item {
+		margin-right: 64px;
+
+		.default-h4 {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.itinerary-btn {
+	font-size: 15px;
+	color: $highlight-color;
+	font-weight: 600;
+	margin-left: auto;
+	padding: 12px;
+	border: $border;
+	border-color: transparent;
+	border-radius: 24px;
+
+	&:hover {
+		border-color: rgba($highlight-color, 0.3);
+	}
+}

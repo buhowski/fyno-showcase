@@ -3,19 +3,19 @@ $black: #000000;
 $white: #ffffff;
 $primary-color: #3c3c43;
 $highlight-color: #714eff;
-$borders-color: #979797;
+$borders-color: #e5e5ea;
 $score-icon-bg: #fddb32;
 
 // Typography Variables
 $font-primary: 'SF Pro Display', sans-serif;
 $base-font-size: 1rem;
-$base-line-height: 1.5;
+$base-line-height: 1.2;
 $medium: 500;
 $semibold: 600;
 
 // Border Variables
 $border-radius: 16px;
-$border: 0.5px solid rgba($borders-color, 0.3);
+$border: 0.5px solid rgba($borders-color, 1);
 $box-shadow: 0 2px 3px rgba($black, 0.03);
 
 // Z-index
