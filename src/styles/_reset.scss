@@ -128,7 +128,26 @@ select {
 	color: inherit;
 	padding: 0;
 	margin: 0;
+	all: unset;
+	font-family: inherit;
+	font-size: inherit;
+	background-color: transparent;
+	border: none;
+	outline: none;
 }
+
+/* Hide arrows in number input fields (Webkit) */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Hide arrows in number input fields (Firefox) */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
 /*
    Avoid text overflows
 */
@@ -161,7 +180,8 @@ a {
 	color: inherit;
 }
 
-button {
+button,
+input {
 	background: none;
 	border: 0;
 	cursor: pointer;

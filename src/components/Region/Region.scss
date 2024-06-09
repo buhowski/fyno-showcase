@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.region {
+	margin-top: 40px;
+
+	&-block {
+		display: flex;
+	}
+}
+
+.region {
+	&-point {
+		&__title {
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.38px;
+		}
+
+		&__subtitle {
+			display: flex;
+
+			.default-h4 {
+				color: rgba($primary-color, 0.5);
+			}
+
+			h4:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+
+		&__text {
+			margin-top: 16px;
+			color: rgba($primary-color, 0.8);
+			letter-spacing: -0.32px;
+		}
+	}
+
+	&-modal {
+		margin-left: auto;
+	}
+}

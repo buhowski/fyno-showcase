@@ -1,4 +1,4 @@
-import { H3 } from '../StructureElements';
+import { H3Component } from '../StructureElements';
 
 import './Overall.scss';
 
@@ -25,8 +25,8 @@ const Overall: React.FC = () => {
 			<div className='overall-grid'>
 				{overallItemData.map((item, index) => (
 					<div className='overall-item' key={index}>
-						<H3 className='default-h4' text={item.title} />
-						<H3 className='default-h3' text={item.value} />
+						<H3Component className='default-h4' text={item.title} />
+						<H3Component className='default-h3' text={item.value} />
 					</div>
 				))}
 

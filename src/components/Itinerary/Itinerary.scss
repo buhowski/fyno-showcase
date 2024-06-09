@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+
+.itinerary {
+	margin-top: 56px;
+
+	&__title {
+		font-size: 22px;
+		letter-spacing: 0.35px;
+		margin-bottom: 24px;
+	}
+
+	&-details {
+		display: flex;
+		align-items: center;
+		box-shadow: $box-shadow;
+		background-color: #f0f4fd;
+		padding: 24px;
+		padding-right: 16px;
+		border-radius: $border-radius;
+		border: $border;
+		letter-spacing: -0.2px;
+		font-size: 15px;
+
+		&__plane {
+			width: 24px;
+			display: flex;
+			margin: 0 12px;
+		}
+
+		svg {
+			flex-shrink: 0;
+		}
+
+		label {
+			display: flex;
+			align-items: center;
+			color: rgba($primary-color, 0.8);
+			border: $border;
+			background-color: $white;
+			border-radius: 8px;
+			margin-left: 16px;
+			padding-left: 4px;
+			cursor: pointer;
+
+			&:hover {
+				border-color: rgba($primary-color, 0.3);
+			}
+
+			span {
+				min-width: 32px;
+				height: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&.itinerary-details__destination {
+				margin-left: 0;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			input {
+				padding: 8px;
+			}
+		}
+
+		&__date {
+			max-width: 158px;
+			width: 100%;
+		}
+
+		&__persons {
+			width: min(100%, 70px);
+			flex-shrink: 0;
+		}
+	}
+}

@@ -1,11 +1,14 @@
 @import './variables';
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	font-family: $font-primary;
+	font-family: $font-family;
 	line-height: $base-line-height;
 	color: $black;
 
-	scroll-behavior: smooth;
 	background-color: #f5f5f5;
 }
 
@@ -26,4 +29,42 @@ body {
 	font-size: 15px;
 	letter-spacing: -0.2px;
 	color: rgba($primary-color, 0.8);
+}
+
+.header button,
+.highlights-actions button,
+.dropdown-item,
+.btn-main {
+	&:hover {
+		background-color: rgba($borders-color, 0.8);
+	}
+}
+
+.btn-main {
+	border: $border;
+	border-radius: 8px;
+	padding: 8px 12px 8px 14px;
+	display: flex;
+	align-items: center;
+
+	font-size: 15px;
+	letter-spacing: -0.1px;
+	font-weight: $semibold;
+
+	svg {
+		margin-right: 10px;
+	}
+}
+
+.text {
+	letter-spacing: -0.41px;
+}
+
+.title {
+	font-family: $second-family;
+	font-weight: $semibold;
+}
+
+input {
+	width: 100%;
 }

@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.highlights {
+	margin-top: 60px;
+
+	&-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+
+	&__title {
+		font-size: 28px;
+		font-weight: $semibold;
+	}
+
+	&-actions {
+		display: flex;
+
+		button:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	&-person {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+
+		&__photo {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 16px;
+		}
+	}
+}

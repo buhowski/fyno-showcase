@@ -65,5 +65,9 @@
 		align-items: center;
 		padding-left: 4px;
 		padding-right: 12px;
+
+		&:hover {
+			background-color: rgba(#888888, 0.1);
+		}
 	}
 }
