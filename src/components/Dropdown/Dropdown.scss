@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	z-index: $zIndex-dropdown;
+
+	&-toggle {
+		display: flex;
+		align-items: center;
+
+		span {
+			min-width: 53px;
+		}
+
+		svg {
+			transform: scaleY(1);
+			transition: transform $transition-time;
+			margin-left: 11px;
+		}
+
+		&.isOpened {
+			svg {
+				transform: scaleY(-1);
+			}
+		}
+	}
+
+	&-menu {
+		width: 100%;
+		position: absolute;
+		top: calc(100% + 1px);
+		left: -1px;
+		background-color: $white;
+		border-bottom-left-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
+		border: $border;
+		overflow: hidden;
+
+		li {
+			padding: 10px 20px;
+			cursor: pointer;
+			// transition: color $transition-time;
+
+			&:hover {
+				background-color: rgba($primary-color, 0.1);
+			}
+		}
+	}
+}

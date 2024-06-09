@@ -1,7 +1,18 @@
+import Header from './components/Header/Header';
+import Gallery from './components/Gallery/Gallery';
+
 import './App.scss';
 
-function App() {
-	return <div className='App'>sss</div>;
-}
+const App = () => {
+	return (
+		<div className='page'>
+			<div className='wrapper'>
+				<Header />
+
+				<Gallery />
+			</div>
+		</div>
+	);
+};
 
 export default App;

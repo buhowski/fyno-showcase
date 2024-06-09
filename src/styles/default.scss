@@ -1,0 +1,14 @@
+@import './variables';
+
+body {
+	font-family: $font-primary;
+	background-color: #f5f5f5;
+	// line-height: ;
+}
+
+.wrapper {
+	width: min(100%, 768px); // instead of max-width
+	margin-inline: auto; // instead of margin: 0 auto;
+	padding: 20px 32px 48px;
+	background-color: $white;
+}

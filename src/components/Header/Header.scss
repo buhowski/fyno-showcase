@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.header {
+	font-size: 15px;
+	font-weight: $semibold;
+	letter-spacing: -0.1px;
+}
+
+.navigation {
+	&-menu {
+		display: flex;
+	}
+
+	&-list {
+		border-radius: $border-radius;
+		border: $border;
+		box-shadow: $box-shadow;
+
+		&__item {
+			padding: 7px 20px;
+
+			&:first-child {
+				padding-left: 16px;
+			}
+
+			&--dropdown {
+				padding-right: 15px;
+				border-left: $border;
+			}
+
+			&--middle {
+				padding-left: 20px;
+				padding-right: 20px;
+				border-left: $border;
+			}
+		}
+	}
+
+	&-create {
+		margin-left: auto;
+		padding: 6px 12px;
+		border-radius: $border-radius;
+		border: $border;
+		box-shadow: $box-shadow;
+		display: flex;
+		align-items: center;
+
+		svg {
+			margin-right: 8px;
+		}
+	}
+}

@@ -10,7 +10,8 @@ $score-icon-bg: #fddb32;
 $font-primary: 'SF Pro Display', sans-serif;
 $base-font-size: 1rem;
 $base-line-height: 1.5;
-$font-weight-medium: 600;
+$medium: 500;
+$semibold: 600;
 
 // Border Variables
 $border-radius: 16px;
@@ -25,6 +26,9 @@ $zIndex-modal: 1050;
 $breakpoint-small: 480px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
+
+// Transition timing
+$transition-time: 0.3s;
 
 // Mixin for media queries
 @mixin respond-to($breakpoint) {
