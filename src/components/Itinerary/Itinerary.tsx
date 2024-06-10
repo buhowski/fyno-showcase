@@ -1,7 +1,7 @@
 import { H2Component } from '../StructureElements';
-
 import ItineraryDetails from './ItineraryDetails';
 import Region from '../Region/Region';
+import { dataRegionA } from '../Region/dataRegions';
 
 import './Itinerary.scss';
 
@@ -12,9 +12,7 @@ const Itinerary = () => {
 
 			<ItineraryDetails />
 
-			<Region />
-
-			<div className='itinerary-overview'></div>
+			<Region id='itinerary' className='region--a' points={dataRegionA} />
 		</section>
 	);
 };
