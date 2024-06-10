@@ -12,16 +12,16 @@ export const RegionPoint: React.FC<RegionPointProps> = ({
 	itemSlider,
 }) => {
 	return (
-		<div className={`region-block ${regionClassName} `}>
-			<div className='region-block__line'>{icon && <span>{icon}</span>}</div>
+		<div className={`region-point ${regionClassName} `}>
+			<div className='region-point__title'>
+				<div className='region-point__icon'>{icon && <span>{icon}</span>}</div>
 
-			<div className='region-point'>
-				<div className='region-point__title'>
-					{title && <H2Component text={title} className='region__title' />}
+				{title && <H2Component text={title} className='region__title' />}
 
-					{button}
-				</div>
+				{button}
+			</div>
 
+			<div className='region-padding'>
 				{subtitles && (
 					<div className='region-point__subtitle'>
 						{subtitles?.map((subtitle) => (

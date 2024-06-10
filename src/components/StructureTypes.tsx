@@ -23,6 +23,7 @@ export interface ItineraryItemProps {
 	curatorsPick?: string;
 	bookmark?: React.ReactNode;
 	title?: string;
+	pointRent?: string;
 	subtitles?: string[];
 }
 

@@ -34,7 +34,8 @@ body {
 .header button,
 .highlights-actions button,
 .dropdown-item,
-.btn-main {
+.btn-main,
+.slider-arrow {
 	&:hover {
 		background-color: rgba($borders-color, 0.8);
 	}

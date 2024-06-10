@@ -1,6 +1,6 @@
 import React from 'react';
 import { ItineraryItemProps } from '../StructureTypes';
-
+import { scoreIcon } from '../../assets/icons/scoreIcon';
 import { H3Component } from '../StructureElements';
 
 const ItineraryItem: React.FC<ItineraryItemProps> = ({
@@ -9,6 +9,7 @@ const ItineraryItem: React.FC<ItineraryItemProps> = ({
 	curatorsPick,
 	bookmark,
 	title,
+	pointRent,
 	subtitles,
 }) => {
 	return (
@@ -21,6 +22,13 @@ const ItineraryItem: React.FC<ItineraryItemProps> = ({
 			</div>
 
 			<H3Component className='itinerary-item__title' text={title} />
+
+			{pointRent && (
+				<p className='itinerary-item__score'>
+					<span className='icon'>{scoreIcon}</span>
+					<span className='number'>{pointRent}</span>/10
+				</p>
+			)}
 
 			<h3 className='itinerary-item__subtitle default-h4'>
 				{subtitles?.map((subtitle, index) => (
