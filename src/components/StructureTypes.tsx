@@ -13,7 +13,7 @@ export interface RegionPointProps {
 	btnText?: string;
 	itemSlider?: React.ReactNode;
 	btnModalIcon?: React.ReactNode;
-	modalDailyPlan?: React.ReactNode;
+	modalDailyPlan?: ItineraryItemProps[];
 	onButtonClick?: () => void;
 }
 

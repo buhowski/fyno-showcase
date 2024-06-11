@@ -28,13 +28,15 @@ const Modal: React.FC<SliderProps> = ({ slides, onButtonClick }) => {
 				/>
 			</div>
 
-			<div className='region-padding'>
+			<div className='region-padding modal-period'>
 				<div className='day-plan'>
 					<H2Component text={'Day 1'} className='region__title' />
 
 					<div className='day-plan__time'>
-						{turnIcon}
-						<span>40m</span>
+						<div className='day-plan__time-bg'>
+							{turnIcon}
+							<span>40m</span>
+						</div>
 
 						<div className='day-plan__more'>{dotsIcon}</div>
 					</div>
@@ -54,13 +56,15 @@ const Modal: React.FC<SliderProps> = ({ slides, onButtonClick }) => {
 				))}
 			</div>
 
-			<div className='region-padding'>
+			<div className='region-padding modal-period'>
 				<div className='day-plan'>
 					<H2Component text={'Day 2'} className='region__title' />
 
 					<div className='day-plan__time'>
-						{turnIcon}
-						<span>1h 40m</span>
+						<div className='day-plan__time-bg'>
+							{turnIcon}
+							<span>1h 40m</span>
+						</div>
 
 						<div className='day-plan__more'>{dotsIcon}</div>
 					</div>

@@ -1,36 +1,47 @@
 @import '../../styles/variables';
 
+$height: 292px;
+
 .gallery {
 	color: $white;
 	margin-top: 20px;
 	position: relative;
-	letter-spacing: -0.1px;
 
 	&-grid {
 		display: flex;
 		gap: 4px;
 		border-radius: 24px;
 		overflow: hidden;
+		height: $height;
 
 		@include respond-to(medium) {
 			flex-direction: column;
+			height: auto;
 		}
 
 		img,
 		picture {
 			width: 100%;
 			height: 100%;
-			transition: height $transition-time;
-			// transform: scale(1);
+			transition: transform $transition-time;
+			transform: scale(1.002);
+			transform-origin: center;
 		}
 	}
 
 	&-main {
 		width: 50%;
-		height: 292px;
 
 		@include respond-to(medium) {
 			width: 100%;
+			height: $height;
+		}
+
+		&:hover {
+			img,
+			picture {
+				transform: scale(1.1);
+			}
 		}
 	}
 
@@ -46,14 +57,21 @@
 	}
 
 	&-item {
-		overflow: hidden;
 		cursor: pointer;
+		overflow: hidden;
 
-		&:hover {
-			img,
-			picture {
-				// transform: scale(1.1);
-				height: 105%;
+		> div {
+			height: 100%;
+		}
+
+		&:not(.gallery-main) {
+			height: calc($height / 2 - 2px);
+
+			&:hover {
+				img,
+				picture {
+					transform: scale(1.2);
+				}
 			}
 		}
 
@@ -67,18 +85,20 @@
 		right: 12px;
 		bottom: 12px;
 		border-radius: 40px;
-		backdrop-filter: blur(24px);
-		background-color: rgba(#888888, 0.3);
 		white-space: nowrap;
-		font-size: 15px;
-		font-weight: $semibold;
 		display: flex;
 		align-items: center;
 		padding-left: 4px;
 		padding-right: 12px;
 
+		backdrop-filter: blur(24px);
+		background-color: rgba(#888888, 0.3);
+		letter-spacing: -0.1px;
+		font-size: 15px;
+		font-weight: $semibold;
+
 		&:hover {
-			background-color: rgba(#888888, 0.1);
+			background-color: rgba(#474646, 0.6);
 		}
 	}
 }

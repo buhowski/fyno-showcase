@@ -1,7 +1,11 @@
 import { PictureComponent } from '../StructureElements';
-
 import { galleryIcon } from '../../assets/icons/galleryIcon';
-import pic1 from '../../assets/images/image_10.jpg';
+
+import pic1 from '../../assets/images/image_10.webp';
+import pic2 from '../../assets/images/image_2.webp';
+import pic3 from '../../assets/images/image_5.webp';
+import pic4 from '../../assets/images/image_3.webp';
+import pic5 from '../../assets/images/image_8.webp';
 
 import './Gallery.scss';
 
@@ -10,11 +14,11 @@ const Gallery = () => {
 	const sources = [{ srcSet: pic1, media: '(min-width: 320px)' }];
 
 	const images = [
-		{ src: pic1, alt: 'Landscape 1' },
-		{ src: pic1, alt: 'Landscape 1' },
-		{ src: pic1, alt: 'Landscape 1' },
-		{ src: pic1, alt: 'Landscape 1' },
-		// Add more images here
+		{ src: pic2, alt: 'Landscape 1' },
+		{ src: pic3, alt: 'Landscape 1' },
+		{ src: pic4, alt: 'Landscape 1' },
+		{ src: pic5, alt: 'Landscape 1' },
+		// TODO: Add more images here for image gallery
 	];
 
 	return (
@@ -30,8 +34,10 @@ const Gallery = () => {
 
 				<div className='gallery-list'>
 					{images.map((image, index) => (
-						<div className='gallery-item gallery-item--small' key={index}>
-							<img src={image.src} alt={image.alt} />
+						<div key={index} className='gallery-item gallery-item--small'>
+							<div>
+								<img src={image.src} alt={image.alt} />
+							</div>
 						</div>
 					))}
 				</div>

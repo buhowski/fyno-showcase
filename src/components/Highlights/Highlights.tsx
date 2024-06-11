@@ -1,6 +1,6 @@
 import { H2Component, H3Component, Button, Paragraph } from '../StructureElements';
 
-import photo from '../../assets/images/image_1.jpg';
+import photo from '../../assets/images/image_1.webp';
 import { wishIcon } from '../../assets/icons/wishIcon';
 import { shareIcon } from '../../assets/icons/shareIcon';
 

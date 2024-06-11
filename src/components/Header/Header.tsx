@@ -10,12 +10,12 @@ interface DropdownItem {
 
 // Dropdown items data
 const options: DropdownItem[] = [
-	{ label: '5 Days', value: 5 },
-	{ label: '6 Days', value: 6 },
-	{ label: '7 Days', value: 7 },
-	{ label: '8 Days', value: 8 },
-	{ label: '9 Days', value: 9 },
-	{ label: '10 Days', value: 10 },
+	{ label: '5 days', value: 5 },
+	{ label: '6 days', value: 6 },
+	{ label: '7 days', value: 7 },
+	{ label: '8 days', value: 8 },
+	{ label: '9 days', value: 9 },
+	{ label: '10 days', value: 10 },
 ];
 
 const Header = () => {

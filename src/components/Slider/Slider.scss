@@ -4,6 +4,8 @@ $width: 216px;
 
 .carousel {
 	position: relative;
+	padding-top: 19px;
+	padding-bottom: 32px;
 
 	&.disabled {
 		display: flex;
@@ -25,7 +27,6 @@ $width: 216px;
 		border-radius: 16px;
 		overflow: hidden;
 		position: relative;
-		margin-bottom: 8px;
 		flex-shrink: 0;
 
 		img {
@@ -76,18 +77,18 @@ $width: 216px;
 	backdrop-filter: blur(24px);
 	padding: 7px 12px;
 	position: absolute;
-	top: 16px;
+	top: 18px;
 	left: 16px;
 }
 
 .bookmark-itinerary {
 	position: absolute;
-	top: 18px;
-	right: 20px;
+	top: 21px;
+	right: 24px;
 	cursor: pointer;
 
 	&:hover {
-		opacity: 0.7;
+		filter: brightness(0.5);
 	}
 }
 
@@ -96,7 +97,7 @@ $width: 216px;
 		font-size: 17px;
 		letter-spacing: -0.41px;
 		font-weight: $semibold;
-		margin-bottom: 4px;
+		margin-bottom: 9px;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -108,10 +109,10 @@ $width: 216px;
 
 	&__score {
 		font-size: 13px;
-		font-weight: $medium;
+		font-weight: $semibold;
 		display: flex;
 		align-items: center;
-		margin-bottom: 4px;
+		margin-bottom: 8px;
 
 		.icon {
 			background-color: $score-icon-bg;
@@ -133,7 +134,7 @@ $width: 216px;
 
 		span:not(:first-child) {
 			position: relative;
-			padding-left: 6px;
+			padding-left: 4px;
 
 			&::before {
 				content: '';

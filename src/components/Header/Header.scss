@@ -8,6 +8,7 @@
 
 .navigation {
 	&-menu {
+		width: 100%;
 		display: flex;
 
 		@include respond-to(medium) {
@@ -34,7 +35,7 @@
 		}
 
 		&__item {
-			padding: 7px 20px;
+			padding: 6px 20px;
 			border: $border;
 
 			&:hover {
@@ -42,6 +43,7 @@
 			}
 
 			&--dropdown {
+				padding-left: 17px;
 				padding-right: 15px;
 				border-top-right-radius: 16px;
 				border-bottom-right-radius: 16px;
@@ -97,7 +99,7 @@
 		}
 
 		svg {
-			margin-right: 8px;
+			margin-right: 6px;
 		}
 	}
 }

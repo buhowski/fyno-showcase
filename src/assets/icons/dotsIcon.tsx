@@ -29,7 +29,7 @@ export const dragIcon = (
 			clipRule='evenodd'
 			d='M0 2.5H14V0.5H0V2.5ZM0 7.5H14V5.5H0V7.5Z'
 			fill='#3C3C43'
-			fill-opacity='0.5'
+			fillOpacity='0.5'
 		/>
 	</svg>
 );

@@ -3,8 +3,6 @@ import { RegionPointProps } from '../StructureTypes';
 import { H2Component, Button } from '../StructureElements';
 import Modal from '../Modal/Modal';
 
-import { sliderA } from '../Slider/SliderData';
-
 export const RegionPoint: React.FC<RegionPointProps> = ({
 	regionClassName,
 	icon,
@@ -21,7 +19,6 @@ export const RegionPoint: React.FC<RegionPointProps> = ({
 
 	const openModal = () => {
 		setShowModal(!showModal);
-		console.log('click');
 	};
 
 	return (
@@ -61,7 +58,7 @@ export const RegionPoint: React.FC<RegionPointProps> = ({
 			</div>
 
 			{showModal && modalDailyPlan && (
-				<Modal slides={sliderA} onButtonClick={openModal} />
+				<Modal slides={modalDailyPlan} onButtonClick={openModal} />
 			)}
 		</>
 	);

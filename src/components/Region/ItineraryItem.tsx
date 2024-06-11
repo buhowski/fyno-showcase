@@ -31,10 +31,12 @@ const ItineraryItem: React.FC<ItineraryItemProps> = ({
 				)}
 			</div>
 
-			<div className=''>
+			<div className='itinerary-titles'>
 				<H3Component className='itinerary-item__title' text={title} />
 
-				{modalSubtitles && <div className='modal-curators'>{curatorsPick}</div>}
+				{modalSubtitles && curatorsPick && (
+					<div className='modal-curators'>{curatorsPick}</div>
+				)}
 
 				{pointRent && (
 					<p className='itinerary-item__score'>

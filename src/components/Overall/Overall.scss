@@ -2,10 +2,9 @@
 
 .overall {
 	border-radius: $border-radius;
-	box-shadow: $box-shadow;
-	padding: 24px;
+	box-shadow: $box-shadow, 0 0 0 0.5px rgba(#979797, 0.3);
+	padding: 25px;
 	margin-top: 28px;
-	border: $border;
 	overflow: hidden;
 
 	&-grid {
@@ -20,6 +19,7 @@
 
 	&-item:not(:last-child) {
 		margin-right: 10%;
+		white-space: nowrap;
 
 		@include respond-to(medium) {
 			margin-right: 0;
@@ -33,12 +33,13 @@
 }
 
 .itinerary-btn {
-	font-size: 15px;
 	color: $highlight-color;
+	font-size: 15px;
 	font-weight: 600;
+	letter-spacing: -0.1px;
 	margin: auto;
 	margin-right: 0;
-	padding: 12px;
+	padding: 10px;
 	border: $border;
 	border-color: transparent;
 	border-radius: 24px;

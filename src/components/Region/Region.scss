@@ -1,24 +1,44 @@
 @import '../../styles/variables';
 
+.itinerary-titles {
+	padding: 9px;
+}
+
 .region {
-	margin-top: 40px;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-family: $font-family;
+		font-size: 17px;
+		letter-spacing: -0.41px;
+	}
 
 	&-padding {
-		padding-left: 46px;
+		padding-left: 49px;
 	}
 
 	&-point {
 		width: 100%;
 		position: relative;
 		z-index: 1;
-		padding-bottom: 44px;
+		height: auto;
 
 		&.modal-open {
-			display: none;
+			// display: none;
+			height: 0;
+			overflow: hidden;
 		}
 
 		&:first-child {
 			padding-bottom: 36px;
+
+			.region__title {
+				font-family: $second-family;
+				font-size: 20px;
+				letter-spacing: 0.38px;
+			}
 
 			.region-point__icon span {
 				background-color: $highlight-color;
@@ -34,14 +54,15 @@
 				height: calc(100% + 10px);
 				background-color: rgba($primary-color, 0.18);
 				position: absolute;
-				left: 13px;
+				left: 15px;
 				top: 12px;
 				z-index: -1;
 			}
 		}
 
 		&__icon {
-			margin-right: 18px;
+			margin-left: 2px;
+			margin-right: 19px;
 			margin-bottom: 4px;
 
 			span {
@@ -64,7 +85,7 @@
 			display: flex;
 			align-items: center;
 			letter-spacing: 0.38px;
-			margin-bottom: 24px;
+			margin-bottom: 4px;
 		}
 
 		&__subtitle {
@@ -80,9 +101,10 @@
 		}
 
 		&__text {
-			margin-top: 16px;
+			margin-top: 19px;
 			color: rgba($primary-color, 0.8);
 			letter-spacing: -0.32px;
+			line-height: 24px;
 		}
 	}
 

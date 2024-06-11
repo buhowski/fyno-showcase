@@ -4,7 +4,7 @@ import { starsIcon } from '../../assets/icons/starsIcon';
 import { bedIcon } from '../../assets/icons/bedIcon';
 import { modalIcon } from '../../assets/icons/modalIcon';
 
-import { sliderA, sliderB } from '../Slider/SliderData';
+import { sliderA, sliderB, sliderC, sliderD } from '../Slider/SliderData';
 
 export const dataRegionA = [
 	{
@@ -24,7 +24,7 @@ export const dataRegionA = [
 		btnModalIcon: modalIcon,
 		btnText: 'Show daily plan',
 		itemSlider: <SliderComponent slides={sliderA} />,
-		modalDailyPlan: true,
+		modalDailyPlan: sliderA,
 	},
 
 	{
@@ -33,5 +33,35 @@ export const dataRegionA = [
 		title: 'Where to stay',
 
 		itemSlider: <SliderComponent slides={sliderB} />,
+	},
+];
+
+export const dataRegionB = [
+	{
+		regionClassName: 'region-point--name',
+		icon: 'B',
+		title: 'South & Highlands',
+		subtitles: ['Geysers', 'Waterfalls', 'Crater lakes'],
+		description:
+			'The South & Highlands of Iceland offer a breathtaking landscape of diverse natural wonders, from expansive glaciers and active volcanoes to serene waterfalls and black sand beaches. This region is also a haven for adventurers, featuring numerous hiking trails, hidden hot springs, and vast lava fields waiting to be explored. Visitors will be captivated by the blend of tranquility and raw, untamed beauty that defines this unique part of Iceland.',
+	},
+
+	{
+		regionClassName: 'region-point--highlights',
+		icon: starsIcon,
+		title: 'Region highlights',
+		buttonId: 'modal1',
+		btnModalIcon: modalIcon,
+		btnText: 'Show daily plan',
+		itemSlider: <SliderComponent slides={sliderC} />,
+		modalDailyPlan: sliderC,
+	},
+
+	{
+		regionClassName: 'region-point--rent',
+		icon: bedIcon,
+		title: 'Where to stay',
+
+		itemSlider: <SliderComponent slides={sliderD} />,
 	},
 ];
