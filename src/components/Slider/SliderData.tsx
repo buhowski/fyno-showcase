@@ -21,6 +21,7 @@ export const sliderA = [
 		bookmark: bookmarkIcon,
 		title: 'Gullfoss Waterfall',
 		subtitles: [`1h`, `Waterfall`],
+		modalSubtitles: [`1h`, `Waterfall`, 'Light traffic'],
 	},
 	{
 		image: image3,
@@ -29,6 +30,7 @@ export const sliderA = [
 		bookmark: bookmarkIcon,
 		title: 'Gullfoss Waterfall',
 		subtitles: [`1h`, `Waterfall`],
+		modalSubtitles: [`1h`, `Waterfall`, 'Light traffic'],
 	},
 	{
 		image: image1,
@@ -37,6 +39,7 @@ export const sliderA = [
 		bookmark: bookmarkIcon,
 		title: 'Thingvellir',
 		subtitles: [`1h`, `Iconic hike`],
+		modalSubtitles: [`1h`, `Waterfall`, 'Light traffic'],
 	},
 ];
 

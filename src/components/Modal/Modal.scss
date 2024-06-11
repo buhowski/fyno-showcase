@@ -2,5 +2,97 @@
 
 .modal {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
+	padding-bottom: 16px;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 2px;
+		height: calc(100% + 10px);
+		background-color: rgba($primary-color, 0.18);
+		position: absolute;
+		left: 13px;
+		top: 12px;
+		z-index: -1;
+	}
+
+	.carousel-item {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 24px;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			background-color: rgba(#9d9da1, 1);
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			border: 2px solid $white;
+			position: absolute;
+			top: 50%;
+			left: -36px;
+			transform: translateY(-50%);
+			box-sizing: content-box;
+		}
+	}
+
+	.carousel-img {
+		width: 96px;
+		height: 132px;
+		border-radius: 12px;
+		margin-right: 24px;
+		margin-bottom: 0;
+	}
+
+	&-curators {
+		font-size: 13px;
+		letter-spacing: -0.08px;
+		color: rgba($primary-color, 0.8);
+		font-weight: $medium;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: 12px;
+	}
+
+	&-drag {
+		display: flex;
+		margin-left: auto;
+		cursor: pointer;
+		padding: 10px 0;
+	}
+}
+
+.day-plan {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.region__title {
+		margin-bottom: 16px;
+	}
+
+	&__time {
+		font-size: 13px;
+		letter-spacing: -0.08px;
+		color: rgba($primary-color, 0.8);
+		font-weight: $medium;
+		display: flex;
+		align-items: center;
+
+		> svg {
+			margin-right: 8px;
+		}
+	}
+
+	&__more {
+		cursor: pointer;
+		display: flex;
+		padding: 9px;
+		margin-left: 18px;
+	}
 }

@@ -3,6 +3,8 @@ import { ItineraryItemProps } from '../StructureTypes';
 import { scoreIcon } from '../../assets/icons/scoreIcon';
 import { H3Component } from '../StructureElements';
 
+import { dotsIcon, dragIcon } from '../../assets/icons/dotsIcon';
+
 const ItineraryItem: React.FC<ItineraryItemProps> = ({
 	image,
 	imageAlt,
@@ -21,26 +23,42 @@ const ItineraryItem: React.FC<ItineraryItemProps> = ({
 			<div className='carousel-img'>
 				<img src={image} alt={imageAlt} />
 
-				{curatorsPick && <div className='curators-pick'>{curatorsPick}</div>}
-				{bookmark && <div className='bookmark-itinerary'>{bookmark}</div>}
+				{!modalSubtitles && curatorsPick && (
+					<div className='curators-pick'>{curatorsPick}</div>
+				)}
+				{!modalSubtitles && bookmark && (
+					<div className='bookmark-itinerary'>{bookmark}</div>
+				)}
 			</div>
 
-			<H3Component className='itinerary-item__title' text={title} />
+			<div className=''>
+				<H3Component className='itinerary-item__title' text={title} />
 
-			{pointRent && (
-				<p className='itinerary-item__score'>
-					<span className='icon'>{scoreIcon}</span>
-					<span className='number'>{pointRent}</span>/10
-				</p>
+				{modalSubtitles && <div className='modal-curators'>{curatorsPick}</div>}
+
+				{pointRent && (
+					<p className='itinerary-item__score'>
+						<span className='icon'>{scoreIcon}</span>
+						<span className='number'>{pointRent}</span>/10
+					</p>
+				)}
+
+				{combinedSubtitles.length > 0 ? (
+					<h3 className='itinerary-item__subtitle default-h4'>
+						{combinedSubtitles.map((subtitle, index) => (
+							<span key={index}>{subtitle}</span>
+						))}
+					</h3>
+				) : null}
+			</div>
+
+			{modalSubtitles && (
+				<>
+					<div className='modal-drag'>{dragIcon}</div>
+
+					<div className='day-plan__more'>{dotsIcon}</div>
+				</>
 			)}
-
-			{combinedSubtitles.length > 0 ? (
-				<h3 className='itinerary-item__subtitle default-h4'>
-					{combinedSubtitles.map((subtitle, index) => (
-						<span key={index}>{subtitle}</span>
-					))}
-				</h3>
-			) : null}
 		</div>
 	);
 };

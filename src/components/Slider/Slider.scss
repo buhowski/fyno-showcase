@@ -1,5 +1,7 @@
 @import '../../styles/variables';
 
+$width: 216px;
+
 .carousel {
 	position: relative;
 
@@ -13,11 +15,12 @@
 	}
 
 	&-item {
-		width: 216px;
+		width: $width;
 		margin-right: 16px;
 	}
 
 	&-img {
+		width: $width;
 		height: 292px;
 		border-radius: 16px;
 		overflow: hidden;

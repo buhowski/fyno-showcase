@@ -13,6 +13,7 @@ const Itinerary = () => {
 			<ItineraryDetails />
 
 			<Region id='itinerary' className='region--a' points={dataRegionA} />
+			<Region className='region--B' points={dataRegionA} />
 		</section>
 	);
 };
