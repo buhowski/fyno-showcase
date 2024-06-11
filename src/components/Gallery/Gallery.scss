@@ -12,6 +12,10 @@
 		border-radius: 24px;
 		overflow: hidden;
 
+		@include respond-to(medium) {
+			flex-direction: column;
+		}
+
 		img,
 		picture {
 			width: 100%;
@@ -24,6 +28,10 @@
 	&-main {
 		width: 50%;
 		height: 292px;
+
+		@include respond-to(medium) {
+			width: 100%;
+		}
 	}
 
 	&-list {
@@ -31,6 +39,10 @@
 		width: 50%;
 		display: flex;
 		flex-wrap: wrap;
+
+		@include respond-to(medium) {
+			width: 100%;
+		}
 	}
 
 	&-item {

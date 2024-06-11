@@ -8,11 +8,17 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 16px;
+
+		@include respond-to(medium) {
+			flex-direction: column;
+			text-align: center;
+		}
 	}
 
 	&__title {
 		font-size: 28px;
 		font-weight: $semibold;
+		white-space: normal;
 	}
 
 	&-actions {

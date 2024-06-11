@@ -26,6 +26,7 @@ $width: 216px;
 		overflow: hidden;
 		position: relative;
 		margin-bottom: 8px;
+		flex-shrink: 0;
 
 		img {
 			height: 100%;

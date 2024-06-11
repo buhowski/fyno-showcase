@@ -21,10 +21,18 @@
 		letter-spacing: -0.2px;
 		font-size: 15px;
 
+		@include respond-to(medium) {
+			flex-direction: column;
+		}
+
 		&__plane {
 			width: 24px;
 			display: flex;
 			margin: 0 12px;
+
+			@include respond-to(medium) {
+				margin-top: 12px;
+			}
 		}
 
 		svg {
@@ -41,6 +49,13 @@
 			margin-left: 16px;
 			padding-left: 4px;
 			cursor: pointer;
+
+			&:not(:first-child) {
+				@include respond-to(medium) {
+					margin-left: 0;
+					margin-top: 12px;
+				}
+			}
 
 			&:hover {
 				border-color: rgba($primary-color, 0.3);
