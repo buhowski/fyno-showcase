@@ -1,4 +1,3 @@
-// PictureComponent
 import React from 'react';
 
 // Default <picture> Component
@@ -28,6 +27,7 @@ interface TagsProps {
 	text?: string;
 	className?: string;
 	icon?: React.ReactNode | null;
+	buttonId?: string;
 }
 
 // Default <h2> Component
@@ -40,10 +40,25 @@ export const H3Component: React.FC<TagsProps> = ({ text, className }) => {
 	return <h3 className={className}>{text}</h3>;
 };
 
+interface ModalProps extends TagsProps {
+	onButtonClick?: () => void; // Callback function for open the modal
+}
+
 // Default <button> Component
-export const Button: React.FC<TagsProps> = ({ icon, text, className }) => {
+export const Button: React.FC<ModalProps> = ({
+	icon,
+	text,
+	className,
+	buttonId,
+	onButtonClick,
+}) => {
 	return (
-		<button className={`btn-main ${className}`} type='button'>
+		<button
+			onClick={onButtonClick}
+			id={buttonId}
+			className={`btn-main ${className}`}
+			type='button'
+		>
 			{icon} {text}
 		</button>
 	);

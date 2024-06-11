@@ -1,3 +1,4 @@
+import React from 'react';
 import { RegionProps } from '../StructureTypes';
 import { RegionPoint } from './RegionPoint';
 
@@ -14,8 +15,11 @@ const Region: React.FC<RegionProps> = ({ id, className, points }) => {
 					title={point.title}
 					subtitles={point.subtitles}
 					description={point.description}
-					button={point.button}
+					buttonId={point.buttonId}
+					btnModalIcon={point.btnModalIcon}
+					btnText={point.btnText}
 					itemSlider={point.itemSlider}
+					modalDailyPlan={point.modalDailyPlan}
 				/>
 			))}
 		</div>

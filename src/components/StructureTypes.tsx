@@ -9,8 +9,12 @@ export interface RegionPointProps {
 	title?: string;
 	subtitles?: string[];
 	description?: string;
-	button?: React.ReactNode;
+	buttonId?: string;
+	btnText?: string;
 	itemSlider?: React.ReactNode;
+	btnModalIcon?: React.ReactNode;
+	modalDailyPlan?: React.ReactNode;
+	onButtonClick?: () => void;
 }
 
 export interface RegionProps extends BaseProps {
@@ -25,8 +29,10 @@ export interface ItineraryItemProps {
 	title?: string;
 	pointRent?: string;
 	subtitles?: string[];
+	modalSubtitles?: string[];
 }
 
 export interface SliderProps extends BaseProps {
 	slides: ItineraryItemProps[];
+	onButtonClick?: () => void;
 }

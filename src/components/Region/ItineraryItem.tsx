@@ -11,7 +11,11 @@ const ItineraryItem: React.FC<ItineraryItemProps> = ({
 	title,
 	pointRent,
 	subtitles,
+	modalSubtitles,
 }) => {
+	// Combine subtitles into a single array for rendering
+	const combinedSubtitles = [...(subtitles || []), ...(modalSubtitles || [])];
+
 	return (
 		<div className={`carousel-item `}>
 			<div className='carousel-img'>
@@ -30,11 +34,13 @@ const ItineraryItem: React.FC<ItineraryItemProps> = ({
 				</p>
 			)}
 
-			<h3 className='itinerary-item__subtitle default-h4'>
-				{subtitles?.map((subtitle, index) => (
-					<span key={index}>{subtitle}</span>
-				))}
-			</h3>
+			{combinedSubtitles.length > 0 ? (
+				<h3 className='itinerary-item__subtitle default-h4'>
+					{combinedSubtitles.map((subtitle, index) => (
+						<span key={index}>{subtitle}</span>
+					))}
+				</h3>
+			) : null}
 		</div>
 	);
 };
