@@ -48,7 +48,7 @@ body {
 .btn-main {
 	// border: $border;
 	border-radius: 8px;
-	padding: 7px 12px 7px 14px;
+	padding: 6px 12px 6px 14px;
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
@@ -58,6 +58,18 @@ body {
 	box-shadow: $box-shadow;
 	border: 0.5px solid #e0e0e0;
 	// box-shadow: $box-shadow, 0 0 0 0.5px rgba(#979797, 0.3);
+
+	&.share-btn {
+		padding-left: 13px;
+
+		@include respond-to(medium) {
+			padding-left: 0;
+		}
+
+		svg {
+			margin-top: -1px;
+		}
+	}
 
 	@include respond-to(medium) {
 		font-size: 0;

@@ -16,7 +16,7 @@
 		// box-shadow: 0 2px 3px rgba(#dce3f6, 0.5), 0 0 0 0.5px rgba(#ccd7f1, 1);
 		border: 0.5px solid #ccd7f1;
 		background-color: #f0f4fd;
-		padding: 24px;
+		padding: 23px 24px;
 		padding-right: 16px;
 		border-radius: $border-radius;
 		margin-bottom: 36px;
@@ -28,6 +28,7 @@
 		&__plane {
 			width: 24px;
 			display: flex;
+			justify-content: center;
 			margin: 0 12px;
 
 			@include respond-to(medium) {
@@ -37,6 +38,7 @@
 
 		svg {
 			flex-shrink: 0;
+			margin-bottom: 2px;
 		}
 
 		label {
@@ -85,6 +87,10 @@
 			}
 
 			&.itinerary-details__persons input {
+				padding-left: 6px;
+			}
+
+			&.itinerary-details__date input {
 				padding-left: 8px;
 			}
 		}

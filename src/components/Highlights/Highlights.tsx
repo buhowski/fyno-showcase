@@ -14,7 +14,7 @@ const Highlights: React.FC = () => {
 
 				<div className='highlights-actions'>
 					<Button icon={wishIcon} text='Add to wishlist' />
-					<Button icon={shareIcon} text='Share' />
+					<Button className='share-btn' icon={shareIcon} text='Share' />
 				</div>
 			</div>
 
