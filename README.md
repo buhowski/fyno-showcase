@@ -22,7 +22,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 |   +-- App.scss    // # SCSS file specific to the App component.
 |   +-- App.tsx     // # Main App component for the project.
 |   +-- index.tsx   // # Entry point for the React application.
-...
+```
+
+```
+├── public          # Static assets served directly, such as HTML file, logo, .ico.
+└── src
+    ├── assets      # Global assets like fonts, icons, and images.
+    ├── components  # Reusable React components.
+    ├── styles      # Global SCSS styles and variables.
+    ├── App.scss    # SCSS file specific to the App component.
+    ├── App.tsx     # Main App component for the project.
+    └── index.tsx   # Entry point for the React application.
 ```
 
 This project use [Create React App](https://github.com/facebook/create-react-app).
