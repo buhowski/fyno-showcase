@@ -16,11 +16,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ```js
 +-- public	// # Static assets served directly, such as HTML file
 +-- src
-|   +-- assets	// # Global assets like fonts, icons, and images.
+|   +-- assets	  // # Global assets like fonts, icons, and images.
 |   +-- components	// # Reusable React components.
-|   +-- styles	// # Global SCSS styles and variables.
+|   +-- styles	  // # Global SCSS styles and variables.
 |   +-- App.scss	// # SCSS file specific to the App component.
-|   +-- App.tsx	// # Main App component for the project.
+|   +-- App.tsx	  // # Main App component for the project.
 |   +-- index.tsx	// # Entry point for the React application.
 ...
 ```
