@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .itinerary-titles {
-	padding: 9px;
+	padding: 11px 7px;
 }
 
 .region {
@@ -32,7 +32,7 @@
 		}
 
 		&:first-child {
-			padding-bottom: 36px;
+			padding-bottom: 34px;
 
 			.region__title {
 				font-family: $second-family;

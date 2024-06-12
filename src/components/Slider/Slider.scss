@@ -5,7 +5,7 @@ $width: 216px;
 .carousel {
 	position: relative;
 	padding-top: 19px;
-	padding-bottom: 32px;
+	padding-bottom: 30px;
 
 	&.disabled {
 		display: flex;
@@ -98,7 +98,7 @@ $width: 216px;
 		font-size: 17px;
 		letter-spacing: -0.41px;
 		font-weight: $semibold;
-		margin-bottom: 9px;
+		margin-bottom: 7px;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -123,11 +123,12 @@ $width: 216px;
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
+			margin-left: 2px;
 			margin-right: 5px;
 			margin-bottom: 3px;
 
 			svg {
-				width: 10.6px;
+				width: 11px;
 			}
 		}
 	}
